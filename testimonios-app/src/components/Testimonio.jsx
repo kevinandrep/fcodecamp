@@ -1,3 +1,5 @@
+import "../styles/Testimonios.css";
+
 export function Testimonio() {
   return (
     <div className="contenedor-testimonio">

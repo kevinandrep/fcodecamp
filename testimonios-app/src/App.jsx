@@ -3,9 +3,12 @@ import { Testimonio } from "./components/Testimonio.jsx";
 
 function App() {
   return (
-    <>
-      <Testimonio></Testimonio>
-    </>
+    <div className="App">
+      <div className="contenedor-principal">
+        <h1>Principal singers</h1>
+        <Testimonio></Testimonio>
+      </div>
+    </div>
   );
 }
 

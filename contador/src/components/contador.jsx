@@ -1,5 +1,6 @@
-import { useState } from "react";
+import { Children, useState } from "react";
 import "../styles/contador.css";
+import { Boton } from "./boton";
 
 export function Contador() {
   const [counter, setCounter] = useState(0);
@@ -16,12 +17,12 @@ export function Contador() {
       <div className="contenedor-number">
         <p>{counter}</p>
       </div>
-      <button className="boton-contar" onClick={handleclick}>
+      <Boton name={"boton-contar"} onclick={handleclick}>
         Click
-      </button>
-      <button className="boton-reset" onClick={handleReset}>
+      </Boton>
+      <Boton name={"boton-reset"} onclick={handleReset}>
         Reiniciar
-      </button>
+      </Boton>
     </div>
   );
 }

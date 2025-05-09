@@ -1,0 +1,29 @@
+body {
+  background-color: #231d44;
+}
+
+.contenedor-contador {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 200px;
+}
+
+.contenedor-number {
+  border-radius: 15px;
+  border-color: aliceblue;
+  font-size: 50px;
+  border-style: solid;
+}
+
+.boton-contar {
+  font-size: 20px;
+  background-color: rgb(41, 114, 41);
+  display: block;
+}
+
+.boton-reset {
+  font-size: 20px;
+  background-color: rgb(106, 34, 124);
+  display: block;
+}

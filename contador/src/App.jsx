@@ -4,7 +4,7 @@ import { Contador } from "./components/contador";
 function App() {
   return (
     <div>
-      <h1>Contador</h1>
+      <h1>Contador de numeros</h1>
       <Contador></Contador>
     </div>
   );

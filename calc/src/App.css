@@ -1,0 +1,29 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  background-color: #130d44;
+}
+
+.boton-numero {
+  background-color: #497283;
+}
+
+.button-operatio {
+  background-color: rgb(42, 92, 42);
+}
+
+.panel-calculadora {
+  display: flex;
+}
+
+.input-container {
+  border: solid;
+  border-radius: 10px;
+  min-width: 100%;
+  min-height: 40px;
+}

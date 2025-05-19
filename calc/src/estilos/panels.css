@@ -1,0 +1,12 @@
+.panel-numeros {
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  background-color: rgb(164, 201, 212);
+  gap: 5px;
+}
+
+.panel-operations {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}

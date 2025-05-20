@@ -1,5 +1,9 @@
 import "../estilos/botonClear.css";
 
-export function BotonClear({ children }) {
-  return <div className="boton-clear">{children}</div>;
+export function BotonClear({ children, manejarClear }) {
+  return (
+    <div onClick={manejarClear} className="boton-clear">
+      {children}
+    </div>
+  );
 }

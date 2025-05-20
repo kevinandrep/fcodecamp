@@ -1,0 +1,13 @@
+.contenedor-tarea {
+  background-color: rgb(37, 39, 110);
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3px;
+  border-radius: 10px;
+}
+
+p {
+  margin-left: 10px;
+}

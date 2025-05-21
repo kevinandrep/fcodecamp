@@ -2,6 +2,8 @@ import { useState } from "react";
 import "./estilos/boton.css";
 import "./App.css";
 import { Tarea } from "./components/tarea";
+import { Busqueda } from "./components/busqueda";
+import { Tareas } from "./components/tareas";
 
 function App() {
   const [lista, setLista] = useState([]);
@@ -19,27 +21,12 @@ function App() {
   return (
     <div className="contenedor-aplicacion">
       <h1>Mis Tareas</h1>
-      <div className="contenedor-input">
-        <form onSubmit={handleClick}>
-          <input
-            onChange={(e) => setTarea(e.target.value)}
-            value={tarea}
-            placeholder="Escribe una tarea"
-          ></input>
-          <button type="submit" className="boton-tareas">
-            Agregar tarea
-          </button>
-        </form>
-      </div>
-      <div className="contenedor-tareas">
-        {lista.map((dato, index) => (
-          <Tarea
-            key={index}
-            onClick={() => handleEliminar(index)}
-            texto={dato}
-          ></Tarea>
-        ))}
-      </div>
+      <Busqueda
+        handleClick={handleClick}
+        tarea={tarea}
+        setTarea={setTarea}
+      ></Busqueda>
+      <Tareas lista={lista} handleEliminar={handleEliminar}></Tareas>
     </div>
   );
 }

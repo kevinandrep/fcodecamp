@@ -28,6 +28,9 @@ export function Navbar() {
         <li className="menu-link">
           <Link to="nosotros">Nosotros</Link>
         </li>
+        <li>
+          <Link to="contacto">Contacto</Link>
+        </li>
       </ul>
     </nav>
   );

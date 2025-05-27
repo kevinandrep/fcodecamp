@@ -1,5 +1,5 @@
 import data from "../data/data.json";
-
+// helpers
 export const pedirDatos = () => {
   return new Promise((resolve, reject) => {
     setTimeout(() => {

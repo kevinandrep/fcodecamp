@@ -27,6 +27,7 @@ function App() {
             path="/productos"
             element={<ItemListContainer></ItemListContainer>}
           ></Route>
+          <Route path="/nosotros" element={<Nosotros></Nosotros>}></Route>
         </Routes>
         {/* <ItemListContainer></ItemListContainer> */}
         {/* <ItemDetailContainer itemId={3}></ItemDetailContainer> */}

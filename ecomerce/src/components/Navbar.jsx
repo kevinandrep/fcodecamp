@@ -31,6 +31,9 @@ export function Navbar() {
         <li>
           <Link to="contacto">Contacto</Link>
         </li>
+        <li>
+          <Link to="carrito">Carrito</Link>
+        </li>
       </ul>
     </nav>
   );

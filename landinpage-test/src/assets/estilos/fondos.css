@@ -1,0 +1,30 @@
+body {
+  background-color: rgb(245, 245, 245);
+  margin: 0;
+}
+.box {
+  width: 100%;
+  height: 200px;
+  background: radial-gradient(rgba(18, 17, 122, 0.6), rgba(185, 132, 70, 0.6)),
+    url("https://imgs.search.brave.com/L0TWMy4x0CesH_h9B5lbFkbVD0GQU7JQnSA792HAQp4/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzk3LzA1/LzBhLzk3MDUwYTRh/YmNhYTdiNTM5YmMx/MjEzMTkxYWY1ZTdh/LmpwZw")
+      center / cover fixed;
+}
+
+/* .box-layer {
+  background-color: red;
+  background: linear-gradient(#000, #fff);
+} */
+
+.opaco {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.656);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+h2 {
+  color: white;
+  font-size: 100%;
+}

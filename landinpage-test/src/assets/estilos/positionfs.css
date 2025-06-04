@@ -1,0 +1,14 @@
+.contenedor {
+  background-color: blue;
+  padding: 150px;
+  position: relative;
+}
+
+.box {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+}

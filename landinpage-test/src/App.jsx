@@ -1,10 +1,10 @@
 import "./App.css";
-import { Positionfs } from "./assets/components/Positionfs";
+import { Transitions } from "./assets/components/Transitions";
 
 function App() {
   return (
     <>
-      <Positionfs></Positionfs>
+      <Transitions></Transitions>
     </>
   );
 }

@@ -1,0 +1,22 @@
+.flexbox {
+  height: 600px;
+  border: 2px solid black;
+  display: flex;
+  flex-flow: row wrap;
+  gap: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+}
+
+.flex-item {
+  margin: 10px;
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 50px;
+}

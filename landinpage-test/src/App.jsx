@@ -1,10 +1,11 @@
 import "./App.css";
+import { Flexbox } from "./assets/components/Flexbox";
 import { Transitions } from "./assets/components/Transitions";
 
 function App() {
   return (
     <>
-      <Transitions></Transitions>
+      <Flexbox></Flexbox>
     </>
   );
 }

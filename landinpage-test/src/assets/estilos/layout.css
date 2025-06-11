@@ -1,0 +1,119 @@
+body {
+  background-color: rgba(255, 160, 52, 0.788);
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* HEADER SECTION */
+.header {
+  color: white;
+  box-sizing: border-box;
+  background-color: rgb(250, 218, 112);
+  background-image: url("https://alfabetajuega.com/hero/2025/04/el-manga-de-black-clover-regresara-en-mayo-de-2025-con-dos-nuevos-capitulos.jpg?width=1200");
+  display: flex;
+  background-size: cover;
+  /* height: 100vh; */
+  position: relative;
+}
+
+.header__overlay {
+  min-height: 100%;
+  width: 100%;
+  background-color: rgba(235, 182, 34, 0.39);
+  position: absolute;
+  z-index: 0;
+}
+
+.header__item-container {
+  position: relative;
+  z-index: 10;
+  margin: auto;
+  text-align: center;
+  max-width: 700px;
+}
+
+.header__item-container p {
+  font-size: 1.2rem;
+  text-wrap: pretty;
+}
+
+.header__img {
+  min-width: 200px;
+  max-width: 50%;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.356);
+  border: 8px solid rgb(255, 255, 255);
+  margin: 20px;
+}
+
+h1 {
+  margin: 0;
+  font-size: 5.2rem;
+  text-wrap: balance;
+}
+
+/* NAVBAR SECTION */
+
+.nav {
+  color: rgb(197, 105, 0);
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px 100px 0 40px;
+  align-items: center;
+  position: sticky;
+  top: 0;
+  margin-bottom: 20px;
+  box-shadow: 0 0 25px #0006;
+}
+
+.nav__ul {
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.nav__item {
+  list-style: none;
+  padding-bottom: 5px;
+}
+
+.nav__link {
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 0;
+  transition: background-color 0.5s, border-radius 0.5s;
+}
+
+.nav__link:hover {
+  background-color: rgb(250, 184, 123);
+  color: black;
+  border-radius: 20px;
+}
+
+.link--login {
+  background-color: #f80;
+  color: white;
+  border-radius: 20px;
+  transition: background-color 0.5s, color 0.5s;
+  padding: 8px 24px;
+}
+
+.link--login:hover {
+  background-color: rgb(255, 191, 107);
+}
+
+.nav__logo {
+  width: 100px;
+}
+
+/* MAIN SECTION */
+
+main {
+  max-width: 500px;
+  margin: auto;
+  text-wrap: pretty;
+}

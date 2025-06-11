@@ -9,33 +9,19 @@
   align-content: center;
 }
 
-.flex-item,
-.flex-itemg {
-  /* width: 100px; */ /* comentado */
-  flex-basis: 100px;
-}
-
 .flex-item {
-  margin: 10px;
-  height: 100px;
   background-color: rgb(36, 209, 36);
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
   font-size: 50px;
-  flex-grow: 10;
-  flex-shrink: 6;
+  flex: 7 1 200px;
 }
 
 .flex-itemg {
-  margin: 10px;
-  height: 100px;
   background-color: rgb(49, 177, 171);
   color: white;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  text-align: center;
+  font-size: 50px;
   flex-grow: 1;
   flex-shrink: 1;
 }

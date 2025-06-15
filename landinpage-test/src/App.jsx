@@ -1,12 +1,8 @@
 import "./App.css";
-import { Layout } from "./assets/components/Layout";
+import { ImagenFlex } from "./assets/components/ImagenFlex";
 
 function App() {
-  return (
-    <>
-      <Layout></Layout>
-    </>
-  );
+  return <></>;
 }
 
 export default App;

@@ -57,6 +57,7 @@ nav a {
   display: flex;
   flex-grow: 1;
   max-width: 1000px;
+  flex-direction: column;
 }
 
 aside,
@@ -91,6 +92,7 @@ main {
 
 aside:last-child {
   min-width: 10rem;
+  display: none;
 }
 
 /* FOOTER */
@@ -102,14 +104,14 @@ footer {
   padding: 40px;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (min-width: 400px) {
   aside:last-child {
-    display: none;
+    display: block;
   }
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (min-width: 800px) {
   .main-wraper {
-    flex-direction: column;
+    flex-direction: row;
   }
 }

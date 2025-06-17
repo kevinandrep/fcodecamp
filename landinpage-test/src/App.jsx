@@ -1,8 +1,12 @@
 import "./App.css";
-import { ImagenFlex } from "./assets/components/ImagenFlex";
+import { Holy } from "./assets/components/Holy";
 
 function App() {
-  return <></>;
+  return (
+    <>
+      <Holy></Holy>
+    </>
+  );
 }
 
 export default App;

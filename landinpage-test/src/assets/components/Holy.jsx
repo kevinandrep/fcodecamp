@@ -1,7 +1,7 @@
 import "../estilos/Holy.css";
 export function Holy() {
   return (
-    <>
+    <div className="holy-root">
       <header className="header">
         <nav className="main-navbar ">
           <ul>
@@ -22,19 +22,20 @@ export function Holy() {
       </header>
       <div className="main-wraper">
         <aside className="secondary-navbar">
+          <h2>ELIGE EL CONCEPTO</h2>
           <nav>
             <ul>
               <li>
-                <a href="#">INICIO</a>
+                <a href="#">Concepto 1</a>
               </li>
               <li>
-                <a href="#">NOSOTROS</a>
+                <a href="#">Concepto 2</a>
               </li>
               <li>
-                <a href="#">PRODUCTOS</a>
+                <a href="#">Concepto 3</a>
               </li>
               <li>
-                <a href="#">CONTACTO</a>
+                <a href="#">Concepto 4</a>
               </li>
             </ul>
           </nav>
@@ -64,6 +65,6 @@ export function Holy() {
       <footer>
         <p>kevin @copyright 2027</p>
       </footer>
-    </>
+    </div>
   );
 }

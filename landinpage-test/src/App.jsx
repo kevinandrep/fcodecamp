@@ -1,10 +1,10 @@
 import "./App.css";
-import { Holy } from "./assets/components/Holy";
+import { Grid } from "./assets/components/grid";
 
 function App() {
   return (
     <>
-      <Holy></Holy>
+      <Grid></Grid>
     </>
   );
 }

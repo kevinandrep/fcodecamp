@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Monserrat";
+  background-color: #e2eaff;
+  color: #101362dd;
+}
+
+body,
+div,
+ul,
+nav,
+header,
+footer,
+a,
+li,
+label {
+  margin: 0;
+  padding: 0;
+}
+
+/* HEADER SECTION */
+header {
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  container-type: inline-size;
+  container-name: header;
+  position: relative;
+}
+
+.header__open-nav-button {
+  color: #48e;
+  font-size: 3rem;
+  font-weight: 600;
+  position: absolute;
+  right: 10px;
+}
+
+.header__checkbox {
+  display: none;
+}
+
+.header__nav {
+  display: none;
+  background-color: #e4dede;
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  top: 0;
+  justify-content: center;
+  align-items: center;
+}
+
+.header__nav-list {
+  display: flex;
+  flex-direction: column;
+  height: 40vh;
+  margin: auto;
+  justify-content: space-evenly;
+}
+
+.header__checkbox:checked ~ .header__nav {
+  display: flex;
+}
+
+.header__logo {
+  max-width: 100%;
+  width: 64px;
+  margin: 10px 20px;
+}
+
+.header__nav-item {
+  list-style: none;
+}
+
+.header__nav-item a {
+  color: #48e;
+}
+
+.header__nav-item a:not(:is(:hover, :active)) {
+  text-decoration: none;
+}
+/* HEADER QUERYS */
+
+@container header (min-width: 600px) {
+  .header__nav {
+    position: static;
+  }
+}

@@ -1,10 +1,10 @@
 import "./App.css";
-import { Grid } from "./assets/components/grid";
+import { ProjectReal } from "./assets/components/ProjectReal";
 
 function App() {
   return (
     <>
-      <Grid></Grid>
+      <ProjectReal></ProjectReal>
     </>
   );
 }

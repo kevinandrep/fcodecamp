@@ -6,7 +6,7 @@ const TURNS = {
   O: "O",
 };
 
-const COMBOS = [
+const COMBO = [
   [0, 1, 2],
   [3, 4, 5],
   [6, 7, 8],
@@ -28,14 +28,13 @@ const Square = ({ children, isSelected, updateBoard, index }) => {
     </div>
   );
 };
-
 function App() {
   const [board, setBoard] = useState(Array(9).fill(null));
   const [turn, setTurn] = useState(TURNS.X);
   const [winner, setWinner] = useState(null);
 
   const checkWinner = (newBoard) => {
-    for (const combo of COMBOS) {
+    for (const combo of COMBO) {
       const [a, b, c] = combo;
       if (
         newBoard[a] &&
@@ -49,7 +48,7 @@ function App() {
   };
 
   const checkGameOver = (newBoard) => {
-    return newBoard.every((square) => square !== null);
+    return newBoard.every((item) => item !== null);
   };
 
   const updateBoard = (index) => {
@@ -57,8 +56,7 @@ function App() {
     const newBoard = [...board];
     newBoard[index] = turn;
     setBoard(newBoard);
-    const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X;
-    setTurn(newTurn);
+    setTurn(turn === TURNS.X ? TURNS.O : TURNS.X);
     const newWinner = checkWinner(newBoard);
     if (newWinner) {
       setWinner(newWinner);
@@ -69,21 +67,18 @@ function App() {
 
   const resetGame = () => {
     setBoard(Array(9).fill(null));
-    setTurn(TURNS.X);
     setWinner(null);
+    setTurn(TURNS.X);
   };
-
   return (
     <>
       <main className="board">
         <section className="game">
-          {board.map((value, index) => {
-            return (
-              <Square key={index} index={index} updateBoard={updateBoard}>
-                {value}
-              </Square>
-            );
-          })}
+          {board.map((item, index) => (
+            <Square key={index} updateBoard={updateBoard} index={index}>
+              {item}
+            </Square>
+          ))}
         </section>
 
         <section className="turn">
@@ -94,12 +89,12 @@ function App() {
         {winner !== null && (
           <section className="winner">
             <div className="text">
-              <h1>{winner === false ? "empate" : "Gano: "}</h1>
+              {winner === false ? "Empate" : `El ganador es ${winner}`}
               <header className="win">
-                <Square>{winner}</Square>
+                {winner && <Square>{winner}</Square>}
               </header>
               <footer>
-                <button onClick={resetGame}>again</button>
+                <button onClick={resetGame}>Again</button>
               </footer>
             </div>
           </section>

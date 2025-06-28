@@ -1,58 +1,38 @@
-import { useState } from "react";
 import { Square } from "./components/Square";
 import { TURNS } from "./constants";
-import { checkWinner } from "./logic/board.js";
 import { WinnerModal } from "./components/WinnerModal.jsx";
 import "./App.css";
 import { Board } from "./components/Board.jsx";
-import { resetGameStorage, saveGame } from "./logic/storage/index.js";
+import { Pointer } from "./components/Pointer.jsx";
+import { useGame } from "./logic/customhooks/useGame.js";
+import { useEffect } from "react";
 
 function App() {
-  const [board, setBoard] = useState(() => {
-    const boardFromLocalStorage = window.localStorage.getItem("board");
-    if (boardFromLocalStorage) return JSON.parse(boardFromLocalStorage);
-    return Array(9).fill(null);
-  });
+  const {
+    board,
+    turn,
+    winner,
+    updateBoard,
+    resetGame,
+    isActive,
+    setIsActive,
+    position,
+    setPosition,
+  } = useGame();
 
-  const [turn, setTurn] = useState(() => {
-    const turnFromStorage = window.localStorage.getItem("turn");
-    return turnFromStorage ?? TURNS.X;
-  });
-  const [winner, setWinner] = useState(null);
+  useEffect(() => {
+    const handleMove = (event) => {
+      const { clientX, clientY } = event;
+      setPosition({ x: clientX, y: clientY });
+    };
 
-  const checkGameOver = (newBoard) => {
-    return newBoard.every((item) => item !== null);
-  };
-
-  const updateBoard = (index) => {
-    if (board[index] || winner) return;
-    const newBoard = [...board];
-    newBoard[index] = turn;
-    setBoard(newBoard);
-    const newTurn = turn === TURNS.X ? TURNS.O : TURNS.X;
-    setTurn(newTurn);
-    saveGame({
-      board: newBoard,
-      newTurn: newTurn,
-    });
-
-    //guardar qui partida
-
-    const newWinner = checkWinner(newBoard);
-    if (newWinner) {
-      setWinner(newWinner);
-    } else if (checkGameOver(newBoard)) {
-      setWinner(false);
+    if (isActive) {
+      window.addEventListener("pointermove", handleMove);
     }
-  };
 
-  const resetGame = () => {
-    setBoard(Array(9).fill(null));
-    setWinner(null);
-    setTurn(TURNS.X);
+    return () => window.removeEventListener("pointermove", handleMove);
+  }, [isActive, setPosition]);
 
-    resetGameStorage();
-  };
   return (
     <>
       <main className="board">
@@ -64,6 +44,13 @@ function App() {
         <section className="turn">
           <Square isSelected={turn === TURNS.X}>{TURNS.X}</Square>
           <Square isSelected={turn === TURNS.O}>{TURNS.O}</Square>
+        </section>
+        <section>
+          <Pointer isActive={isActive} position={position} />
+
+          <button onClick={() => setIsActive(!isActive)}>
+            {isActive ? "Desactivar" : "Activar"}
+          </button>
         </section>
         <WinnerModal winner={winner} resetGame={resetGame} />
       </main>

@@ -7,9 +7,14 @@
     "dev": "vite",
     "build": "vite build",
     "preview": "vite preview",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "lint": "eslint . --ext js,jsx"
   },
   "devDependencies": {
+    "@babel/eslint-parser": "^7.28.0",
+    "@babel/preset-react": "^7.27.1",
+    "@playwright/test": "^1.53.2",
+    "@types/node": "^24.0.10",
     "@vitejs/plugin-react": "^4.6.0",
     "eslint-config-prettier": "^10.1.5",
     "eslint-plugin-prettier": "^5.5.1",
@@ -22,11 +27,22 @@
   },
   "eslintConfig": {
     "extends": [
-      "./node_modules/standard/eslintrc.json",
       "plugin:prettier/recommended"
     ],
+    "parser": "@babel/eslint-parser",
+    "parserOptions": {
+      "requireConfigFile": false,
+      "babelOptions": {
+        "presets": [
+          "@babel/preset-react"
+        ]
+      }
+    },
     "plugins": [
       "prettier"
-    ]
+    ],
+    "rules": {
+      "prettier/prettier": "error"
+    }
   }
 }

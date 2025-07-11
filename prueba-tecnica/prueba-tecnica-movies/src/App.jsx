@@ -4,7 +4,7 @@ import { Movies } from "./components/movies";
 import { useMovies } from "./hooks/useMovies";
 
 function App() {
-  const { movies: mapedMovies } = useMovies();
+  const { movies } = useMovies();
 
   return (
     <div className="page">
@@ -16,7 +16,7 @@ function App() {
         </form>
       </header>
       <main>
-        <Movies movies={mapedMovies}></Movies>
+        <Movies movies={movies}></Movies>
       </main>
     </div>
   );

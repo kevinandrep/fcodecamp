@@ -20,6 +20,7 @@ export function useMovies({ search, sort }) {
       setMovies(newMovies);
     } catch (e) {
       setError(e.message);
+      console.log(error);
     } finally {
       setLoading(false);
     }

@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { FiltersContext } from "./context";
+import { FiltersContext } from "./FiltersContext";
 
 //Paso 2: Crear el provider para proveer el contexto PROVEE ACCESO AL CONTEXTO
 export function FiltersProvider({ children }) {

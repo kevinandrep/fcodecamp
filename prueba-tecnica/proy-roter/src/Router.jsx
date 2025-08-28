@@ -22,6 +22,6 @@ export function Router({
   }, []);
 
   const Page = routes.find(({ path }) => path === currentPath)?.Component;
-  console.log("esto es: ", Page);
+
   return Page ? <Page /> : <DefaultComponent />;
 }

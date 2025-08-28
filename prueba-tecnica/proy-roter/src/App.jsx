@@ -2,6 +2,7 @@ import "./App.css";
 import { Router } from "./Router.jsx";
 import HomePage from "./pages/Home.jsx";
 import AboutPage from "./pages/About.jsx";
+import SearchPage from "./pages/Search.jsx";
 
 const appRoutes = [
   {
@@ -11,6 +12,10 @@ const appRoutes = [
   {
     path: "/about",
     Component: AboutPage,
+  },
+  {
+    path: "/search/:query",
+    Component: SearchPage,
   },
 ];
 

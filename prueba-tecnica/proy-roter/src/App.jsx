@@ -1,18 +1,13 @@
 import "./App.css";
 import { Router } from "./Router.jsx";
-import HomePage from "./pages/Home.jsx";
-import AboutPage from "./pages/About.jsx";
 import SearchPage from "./pages/Search.jsx";
+import { Route } from "./Route.jsx";
+import { lazy, Suspense } from "react";
+
+const LazyAboutPage = lazy(() => import("./pages/About.jsx"));
+const LazyHomePage = lazy(() => import("./pages/Home.jsx"));
 
 const appRoutes = [
-  {
-    path: "/",
-    Component: HomePage,
-  },
-  {
-    path: "/about",
-    Component: AboutPage,
-  },
   {
     path: "/search/:query",
     Component: SearchPage,
@@ -22,7 +17,12 @@ const appRoutes = [
 function App() {
   return (
     <main>
-      <Router routes={appRoutes}></Router>
+      <Suspense fallback={<h1>Loading...</h1>}>
+        <Router routes={appRoutes}>
+          <Route path="/" Component={LazyHomePage} />
+          <Route path="/about" Component={LazyAboutPage} />
+        </Router>
+      </Suspense>
     </main>
   );
 }

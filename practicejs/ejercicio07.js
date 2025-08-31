@@ -24,6 +24,12 @@
 
 const text = "Los estudiantes de programación practican código todos los días";
 
-let conteo = text.toLocaleLowerCase();
+let conteo = text
+  .toLocaleLowerCase()
+  .split(" ")
+  .reduce((acc, word) => {
+    acc[word] = (acc[word] || 0) + 1;
+    return acc;
+  }, {});
 
 console.log(conteo);

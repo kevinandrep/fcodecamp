@@ -1,12 +1,48 @@
-# React + Vite
+# React + Vite – Configuración Base
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este proyecto proporciona una configuración mínima para trabajar con **React** usando **Vite**, incluyendo **Hot Module Replacement (HMR)** y una configuración básica de **ESLint**.
 
-Currently, two official plugins are available:
+Actualmente, existen dos plugins oficiales disponibles:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+* **@vitejs/plugin-react** – Usa Babel para Fast Refresh
+* **@vitejs/plugin-react-swc** – Usa SWC para compilaciones más rápidas y Fast Refresh
 
-## Expanding the ESLint configuration
+---
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ESLint y calidad de código
+
+Si estás desarrollando una aplicación para producción, se recomienda:
+
+* Usar **TypeScript** para mayor seguridad de tipos
+* Habilitar reglas de ESLint con soporte de tipos
+* Mantener un estilo de código consistente
+
+Puedes revisar la plantilla oficial React + TypeScript:
+[https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts)
+
+---
+
+# 📅 Requerimientos diarios – Página Web Ecommerce
+
+Los siguientes requerimientos representan un **alcance estándar de trabajo para un solo día** en el desarrollo de una página web de **ecommerce**. No corresponden a todos los requerimientos del proyecto, sino a tareas realistas que se suelen asignar diariamente en un entorno profesional.
+
+---
+
+## 🧩 Requerimientos funcionales (alcance diario)
+
+* Implementar o mejorar **una funcionalidad relacionada a productos**, por ejemplo:
+
+  * Tarjeta de producto (Product Card)
+  * Vista de detalle de producto
+  * Visualización de precio con descuento
+
+* Renderizar productos de forma dinámica desde:
+
+  * Datos simulados (mock)
+  * o una API
+
+* Agregar interacción básica del usuario:
+
+  * Botón "Agregar al carrito"
+  * Selector de cantidad
+  * Vali

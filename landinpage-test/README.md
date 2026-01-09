@@ -24,7 +24,7 @@ Puedes revisar la plantilla oficial React + TypeScript:
 
 # 📅 Requerimientos diarios – Página Web Ecommerce
 
-Los siguientes requerimientos representan un **alcance estándar de trabajo para un solo día** en el desarrollo de una página web de **ecommerce**. No corresponden a todos los requerimientos del proyecto, sino a tareas realistas que se suelen asignar diariamente en un entorno profesional.
+Los cambios deben de ser pusheados a la rama alternativa establecida con fecha limite de 06:00 hrs del dia siguiente a la emision de este documento
 
 ---
 
